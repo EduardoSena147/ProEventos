@@ -8,26 +8,38 @@ using Microsoft.Extensions.Logging;
 namespace ProEventos.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    [Route("api/[controller]")]
+    public class EventoController : ControllerBase
     {
+        public EventoController()
+        {
+
+        }
+
+        [HttpGet]
+        public string Get()
+        {
+            return "value";
+        }
+
+        /*
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<EventoController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public EventoController(ILogger<EventoController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Evento> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new Evento
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
@@ -35,5 +47,6 @@ namespace ProEventos.API.Controllers
             })
             .ToArray();
         }
+        */
     }
 }
