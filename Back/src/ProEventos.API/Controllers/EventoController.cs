@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProEventos.API.Models;
 
 namespace ProEventos.API.Controllers
 {
@@ -16,12 +17,64 @@ namespace ProEventos.API.Controllers
 
         }
 
+        public IEnumerable<Evento> _evento = new Evento[] {
+            new Evento(){
+                EventoId = 1,
+                Tema = "Angular 11 e .NET 5",
+                Local = "Fortaleza",
+                Lote = "1° Lote",
+                QtdPessoas = 250,
+                DataEvento = DateTime.Now.AddDays(5).ToString(),
+                ImagemURL = "Teste.png"
+            },
+
+            new Evento(){
+                EventoId = 2,
+                Tema = "Angular 11 e .NET 5",
+                Local = "Maracanaú",
+                Lote = "1° Lote",
+                QtdPessoas = 250,
+                DataEvento = DateTime.Now.AddDays(10).ToString(),
+                ImagemURL = "Teste.png"
+            },
+
+            new Evento(){
+                EventoId = 3,
+                Tema = "Angular 11 e .NET 5",
+                Local = "Pacatuba",
+                Lote = "1° Lote",
+                QtdPessoas = 250,
+                DataEvento = DateTime.Now.AddDays(15).ToString(),
+                ImagemURL = "Teste.png"
+            }
+        };
+
         [HttpGet]
-        public string Get()
+        public IEnumerable<Evento> Get()
         {
-            return "value";
+            return _evento;
         }
 
+        [HttpGet("{id}")]
+        public IEnumerable<Evento> GetById(int id)
+        {
+            return _evento.Where(evento => evento.EventoId == id);
+        }
+
+        [HttpPost]
+        public string Post(){
+            return "Teste de POST";
+        }
+
+        [HttpPut("{id}")]
+        public string Put(int id){
+            return $"Exemplo de PUT com id = {id}";
+        }
+
+        [HttpDelete("{id}")]
+        public string Delete(int id){
+            return $"Exemplo de DELETE com id = {id}";
+        }
         /*
         private static readonly string[] Summaries = new[]
         {
