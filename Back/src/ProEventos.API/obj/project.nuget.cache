@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zwf6ulZ5i/OKwqAA0NRMygFAvxZZLVU9HRAugyaKLCkCDGUXhiXVAqOQ+5RjZMsUDUMqODTGL2zF/MYtKZomtQ==",
+  "dgSpecHash": "Lb2o3ItrdOIv3cYRdUFHB7R/B+EVUnJA/IyfBO13hTRsH+H7hd4Q+sLPnAwqQNaQQBa83E7U855IrCj9DGMtqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dudu\\source\\repos\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+  "projectFilePath": "C:\\Users\\dudu\\Documents\\projetos\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dudu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\dudu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
